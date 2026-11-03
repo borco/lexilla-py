@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>lexilla docs have moved</title>
+<meta name="robots" content="noindex">
+<script>
+  // lexilla-py's docs moved into the scintilla-py monorepo's site; send each
+  // old page to its new home, anything unknown to lexilla's overview.
+  var NEW = "https://borco.github.io/scintilla-py/";
+  var MAP = {
+    "": "lexilla/",
+    "bindings/": "lexilla/bindings/",
+    "build/": "lexilla/build/",
+    "auditing/": "lexilla/auditing/",
+    "specs/mission/": "development/mission/",
+    "documenting/": "development/documenting/",
+    "testpypi/": "development/testpypi/",
+    "examples/": "examples/"
+  };
+  var path = location.pathname.replace(/^\/lexilla-py\/?/, "").replace(/index\.html$/, "");
+  if (path && !path.endsWith("/")) path += "/";
+  location.replace(NEW + (MAP[path] || "lexilla/") + location.hash);
+</script>
+<meta http-equiv="refresh" content="0; url=https://borco.github.io/scintilla-py/lexilla/">
+<link rel="canonical" href="https://borco.github.io/scintilla-py/lexilla/">
+</head>
+<body>
+<p>The lexilla docs have moved to
+<a href="https://borco.github.io/scintilla-py/lexilla/">borco.github.io/scintilla-py/lexilla</a>.</p>
+</body>
+</html>
